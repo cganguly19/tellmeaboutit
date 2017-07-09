@@ -1,0 +1,13 @@
+Tell me about it!
+
+
+Print "Welcome to the listening bot. How are you feeling today?"
+While user does not input "bye" or equivalent: 
+    Read raw_input from user
+    Use NLTK on raw_input to determine if response is negative or positive
+    If negative : 
+        Give comforting quote 
+    If positive:
+        Give happy quote    
+    Print "How do you feel now?"
+Print "Bye! Come see me again any time."       
