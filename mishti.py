@@ -12,30 +12,27 @@ def mishti():
     greeting = "Welcome to the listening bot. How are you feeling today?"
     print greeting
 
-#     Print "Welcome to the listening bot. How are you feeling today?"
-# While user does not input "bye" or equivalent: 
-#     Read raw_input from user
-#     Use NLTK on raw_input to determine if response is negative or positive
-#     If negative : 
-#         Give comforting quote 
-#     If positive:
-#         Give happy quote    
-#     Print "How do you feel now?"
-# Print "Bye! Come see me again any time."       
 
+#          
+
+    # While user does not input "bye" or equivalent: 
     while True:
-
+         #  Read raw_input from user
         answer = get_input()
         print "You are feeling ", answer
-
+        #to do  Use NLTK on raw_input to determine if response is negative or positive
+        #If negative : 
         if answer == "sad":
+            #Give comforting quote 
             print "Federer just won his eight Wimbeldon at 35. You can do it!"
-#             if negative : 
-# #         Give comforting quote 
-
+           
+        #If positive:    
         elif answer == "happy":
+            #  Give happy quote 
             print "A smile is a curve that sets things straight. Keep smiling."
             break
+            #Print "How do you feel now?"
+            # Print "Bye! Come see me again any time." 
 
 
 mishti()
