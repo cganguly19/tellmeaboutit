@@ -2,6 +2,7 @@
 
 
 import random
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 inspirational_quotes = ['Listen, smile, agree and then do whatever you were going to do anyway.',             
               'Never let a bad day make you feel like you have a bad life.',
@@ -49,17 +50,14 @@ def mishti():
          #  Read raw_input from user
         answer = get_input()
         print "You are feeling ", answer
-        #to do  Use NLTK on raw_input to determine if response is negative or positive
-        #If negative : 
-        if answer == "sad":
-            #Give comforting quote 
-            print "Federer just won his eight Wimbeldon at 35. You can do it!"
-           
-        #If positive:    
-        elif answer == "happy":
-            #  Give happy quote 
+        sentiment = SentimentIntensityAnalyzer(lexicon_file= 'vader_lexicon.txt')
+        sentiment_score = sentiment.polarity_scores(answer)
+        if sentiment_score['neg'] > 0:
             print random_quote(inspirational_quotes)
             break
+        # The answer was negative
+        elif sentiment_score['pos'] > 0:
+            print "I am glad you are doing well. Come chat with me any time."
             #Print "How do you feel now?"
             # Print "Bye! Come see me again any time." 
 

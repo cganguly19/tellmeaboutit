@@ -1,5 +1,7 @@
 Tell me about it!
 
+import random
+
 
 Print "Welcome to the listening bot. How are you feeling today?"
 While user does not input "bye" or equivalent: 
@@ -10,7 +12,35 @@ While user does not input "bye" or equivalent:
     If positive:
         Give happy quote    
     Print "How do you feel now?"
-Print "Bye! Come see me again any time."       
+Print "Bye! Come see me again any time."    
+
+define function random quote
+randint
+variable that holds all my quotes
+random quote will give a random quote
+list of quotes
+get length of ls
+1- 10?
+use random function to pick 0-9
+assign variable called index
+inside random function return from the list of quotes 
+call from mylist[index] (save all quotes in mylist)
+use index to call from mylist
+
+def random_quote():
+  pull_quote = [Listen, smile, agree and then do whatever you were going to do anyway.',
+              'Never let a bad day make you feel like you have a bad life.',
+              'The person who says something is impossible should not interrupt the person who is doing it.', 
+              'It is never too late to be what you might have been.',
+               'Great minds discuss ideas. Average minds discuss events. Small minds discuss people.',
+              'If opportunity doesn’t knock, build a door.',
+              'The higher you climb the better the view.',]
+              print pull_quote[0]
+              listlen = len(pull_quote)
+              #random.randint returns a random integer in between the first parameter and last
+              random_index = random.randint(0, listlen - 1)              
+
+
 
 def quotes: return one of the following:
              'Listen, smile, agree and then do whatever you were going to do anyway.',
